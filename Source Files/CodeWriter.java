@@ -162,7 +162,7 @@ public class CodeWriter extends JFrame {
 						BufferedImage qrcode = ImageParser();
 						File outputfile = fileChooser.getSelectedFile();
 						String ext=getEXT(outputfile.getName());
-						if(!(ext=="png" || ext=="jpg")) {
+						if(!(ext.equals("png") || ext.equals("jpg"))) {
 							FileFilter temp= fileChooser.getFileFilter();
 							if(temp==imgFilter2) ext="jpg";
 							else ext="png";
