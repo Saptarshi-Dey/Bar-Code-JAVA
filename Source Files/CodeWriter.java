@@ -67,7 +67,7 @@ public class CodeWriter extends JFrame {
 	
 	private BufferedImage ImageParser() throws Exception {
 		String text=TextData.getText();
-		if(text=="") throw new Exception("Please enter some Text!!!");
+		if(text.equals("")) throw new Exception("Please enter some Text!!!");
 		int width=Integer.parseInt(textField.getText());
         int height=Integer.parseInt(textField_1.getText());
         BufferedImage code=new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
@@ -162,7 +162,7 @@ public class CodeWriter extends JFrame {
 						BufferedImage qrcode = ImageParser();
 						File outputfile = fileChooser.getSelectedFile();
 						String ext=getEXT(outputfile.getName());
-						if(!(ext=="png" || ext=="jpg")) {
+						if(!(ext.equals("png") || ext.equals("jpg"))) {
 							FileFilter temp= fileChooser.getFileFilter();
 							if(temp==imgFilter2) ext="jpg";
 							else ext="png";
