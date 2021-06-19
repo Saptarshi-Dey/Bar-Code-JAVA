@@ -5,6 +5,7 @@ import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.border.EmptyBorder;
 import javax.swing.filechooser.FileFilter;
 
@@ -120,10 +121,10 @@ public class CodeWriter extends JFrame {
 		TextData.setFont(new Font("DejaVu Sans", Font.BOLD, 13));
 		
 		TextData.setForeground(new Color(0, 0, 128));
-		TextData.setBackground(new Color(0, 255, 255));
 		TextData.setToolTipText("Enter your Text here");
-		TextData.setBounds(29, 166, 542, 162);
-		contentPane.add(TextData);
+		JScrollPane SP= new JScrollPane(TextData,JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED,JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+		SP.setBounds(29, 166, 542, 162);
+		contentPane.add(SP);
 		
 		final JLabel imgLabel = new JLabel("Your Preview will be shown here");
 		imgLabel.setBounds(29, 0, 264, 154);

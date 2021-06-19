@@ -1,8 +1,9 @@
-import java.awt.EventQueue;
+import java.awt.EventQueue; 
 
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.border.EmptyBorder;
 import javax.swing.filechooser.FileFilter;
 
@@ -12,7 +13,6 @@ import com.google.zxing.Result;
 import com.google.zxing.client.j2se.BufferedImageLuminanceSource;
 import com.google.zxing.common.HybridBinarizer;
 
-import javax.swing.JTextPane;
 import javax.imageio.ImageIO;
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
@@ -22,6 +22,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileInputStream;
 import java.awt.event.ActionEvent;
+import javax.swing.JTextArea;
 
 public class CodeReader extends JFrame {
 
@@ -52,10 +53,11 @@ public class CodeReader extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		final JTextPane txtpnYourTextWill = new JTextPane();
-		txtpnYourTextWill.setText("Your Text will be displayed here");
-		txtpnYourTextWill.setBounds(12, 0, 438, 180);
-		contentPane.add(txtpnYourTextWill);
+		final JTextArea ShowText = new JTextArea();
+		ShowText.setText("Your Text will be displayed here");
+		JScrollPane SP= new JScrollPane(ShowText,JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED,JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+		SP.setBounds(12, 0, 444, 183);
+		contentPane.add(SP);
 		
 		JButton btnSelectImage = new JButton("Select Image");
 		btnSelectImage.addActionListener(new ActionListener() {
@@ -76,7 +78,7 @@ public class CodeReader extends JFrame {
 						BufferedImage x= ImageIO.read(new FileInputStream(outputfile.getAbsolutePath()));
 			    		BinaryBitmap bmp=new BinaryBitmap(new HybridBinarizer(new BufferedImageLuminanceSource(x)));
 			    		Result rs=new MultiFormatReader().decode(bmp);
-			    		txtpnYourTextWill.setText(rs.getText());
+			    		ShowText.setText(rs.getText());
 					}
 				}catch(Exception exc) {
 					System.out.println(exc.toString());
@@ -86,5 +88,6 @@ public class CodeReader extends JFrame {
 		});
 		btnSelectImage.setBounds(157, 197, 138, 31);
 		contentPane.add(btnSelectImage);
+		
 	}
 }
