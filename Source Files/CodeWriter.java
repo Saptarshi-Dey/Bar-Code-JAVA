@@ -152,7 +152,7 @@ public class CodeWriter extends JFrame {
 					JFileChooser fileChooser = new JFileChooser();
 					fileChooser.setDialogTitle("Export to Image");
 					fileChooser.setMultiSelectionEnabled(false);
-					
+					fileChooser.setAcceptAllFileFilterUsed(false);
 					FileFilter imgFilter = new FileTypeFilter(".png","Portable Network Graphics");
 					FileFilter imgFilter2 = new FileTypeFilter(".jpg", "Joint Photographic Experts Group");
 					fileChooser.addChoosableFileFilter(imgFilter);

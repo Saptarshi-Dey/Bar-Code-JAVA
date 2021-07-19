@@ -38,7 +38,7 @@ public class MainFrame {
 		frmBarcodeWriter = new JFrame();
 		frmBarcodeWriter.setResizable(false);
 		frmBarcodeWriter.setTitle("BarCode Writer & Reader");
-		frmBarcodeWriter.setBounds(100, 100, 341, 148);
+		frmBarcodeWriter.setBounds(100, 100, 261, 151);
 		frmBarcodeWriter.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmBarcodeWriter.getContentPane().setLayout(null);
 		
@@ -52,7 +52,7 @@ public class MainFrame {
 				x.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 			}
 		});
-		btnCodeWriter.setBounds(103, 6, 117, 38);
+		btnCodeWriter.setBounds(71, 6, 117, 38);
 		frmBarcodeWriter.getContentPane().add(btnCodeWriter);
 		
 		JButton btnCodeReader = new JButton("Code Reader");
@@ -63,7 +63,7 @@ public class MainFrame {
                 x.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 			}
 		});
-		btnCodeReader.setBounds(103, 51, 117, 38);
+		btnCodeReader.setBounds(71, 51, 117, 38);
 		frmBarcodeWriter.getContentPane().add(btnCodeReader);
 	}
 }
