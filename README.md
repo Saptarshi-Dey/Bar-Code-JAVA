@@ -10,6 +10,8 @@
 * ### PDF417
 * ### QR Code
 
+## [App Demo](https://youtu.be/fYICUKWAxAI)
+
 ## _**Dependencies**_ 
 * ### Java Zxing
 > [__Click here to go to the Official Repository__](https://github.com/zxing/zxing)
