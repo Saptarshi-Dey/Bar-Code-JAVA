@@ -29,3 +29,6 @@
 	  <artifactId>javase</artifactId>
 	  <version>3.4.1</version>
 	</dependency>
+## How to run the jar file
+
+	java -jar BarCode.jar
