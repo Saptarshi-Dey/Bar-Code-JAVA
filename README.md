@@ -32,3 +32,6 @@
 ## How to run the jar file
 
 	java -jar BarCode.jar
+## Screenshot
+![image](https://github.com/user-attachments/assets/1dee8e9b-6176-4bd1-976a-448309b08b95)
+***
